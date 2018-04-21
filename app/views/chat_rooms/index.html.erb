@@ -1,0 +1,19 @@
+<h1>ChatRooms#index</h1>
+<p>Find me in app/views/chat_rooms/index.html.erb</p>
+
+<%= link_to "New Topic", new_chat_room_path %>
+
+<table>
+  <tr>
+  	<th>ID</th>
+  	<th>Topic</th>
+  	<th>Action</th>
+  </tr>
+  <% @chatrooms.each do |chatroom| %>
+  <tr>
+    <td><%= chatroom.id %></td>
+    <td><%= chatroom.topic %></td>
+    <td><%= link_to "Join", chat_room_path(chatroom) %></td>
+  </tr>
+  <% end %>
+</table>

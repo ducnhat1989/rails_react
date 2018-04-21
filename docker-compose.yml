@@ -1,0 +1,18 @@
+version: "2"
+services:
+  db:
+    image: mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES UTF8; SET CHARACTER SET utf8mb4;'
+    ports:
+      - "3406:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  web:
+    image: ruby233/myapp
+    tty: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/myapp
+    depends_on:
+      - db

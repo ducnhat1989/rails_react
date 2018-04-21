@@ -1,0 +1,8 @@
+FROM ruby:2.3.3
+RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs npm apt-utils zip curl jq
+RUN npm install n -g
+RUN mkdir /myapp
+WORKDIR /myapp
+
+# docker build -f Workspaces/dockers/Dockerfile_rails -t ruby233/myapp .

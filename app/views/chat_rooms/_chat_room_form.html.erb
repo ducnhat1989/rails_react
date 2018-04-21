@@ -1,0 +1,7 @@
+<%= form_for chat_room, authenticity_token: true do |f| %>
+  <%= f.label :topic %>:
+  <%= f.text_field :topic, class: "form-control" %>
+  <%= f.label :slug %>:
+  <%= f.text_field :slug, class: "form-control" %>
+  <%= f.submit "Create", class: "btn btn-primary", data: {send: "message"}%>
+<%end%>
