@@ -1,14 +1,31 @@
 {
-  "name": "myapp",
-  "private": true,
-  "dependencies": {
-    "@rails/webpacker": "3.4",
-    "babel-preset-react": "^6.24.1",
-    "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+  "name": "react-webpack-rails-tutorial",
+  "version": "1.1.1",
+  "description": "Built using the react_on_rails generator. Allows you to run npm install from root.",
+  "main": "server.js",
+  "engines": {
+    "node": "9.11.1",
+    "npm": "5.6.0"
   },
-  "devDependencies": {
-    "webpack-dev-server": "2.11.2"
-  }
+  "scripts": {
+    "postinstall": "cd client && npm install",
+    "test": "rspec && (cd client && npm run lint)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakacode/react-webpack-rails-tutorial.git"
+  },
+  "keywords": [
+    "react",
+    "tutorial",
+    "comment",
+    "example"
+  ],
+  "author": "justin808",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shakacode/react-webpack-rails-tutorial/issues"
+  },
+  "homepage": "https://github.com/shakacode/react-webpack-rails-tutorial",
+  "dependencies": {}
 }
